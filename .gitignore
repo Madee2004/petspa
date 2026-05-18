@@ -1,0 +1,8 @@
+# Ignorar las fotos reales que suban los usuarios en local
+uploads/*
+# Pero no ignores el archivo que mantiene viva la carpeta
+!uploads/.gitkeep
+
+# Ignorar archivos del sistema operativo
+.DS_Store
+Thumbs.db

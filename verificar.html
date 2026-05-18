@@ -1,0 +1,24 @@
+<!-- C:\xampp\htdocs\petspa\verificar.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Verificar Cuenta - Pet Spa</title>
+    <style>
+        body { font-family: sans-serif; display: flex; justify-content: center; padding-top: 100px; background: #eef2f3; }
+        .card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); width: 300px; text-align: center; }
+        input { width: 100%; padding: 12px; margin: 20px 0; border: 2px solid #ddd; border-radius: 6px; font-size: 18px; text-align: center; letter-spacing: 2px; }
+        .btn { width: 100%; padding: 12px; background: #007bff; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>Activa tu cuenta</h2>
+        <p>Ingresa el código de 10 dígitos enviado a tu correo.</p>
+        <form action="verificar_token.php" method="POST">
+            <input type="text" name="token" placeholder="Ej: a1b2c3d4e5" maxlength="10" required>
+            <button type="submit" class="btn">Validar y Entrar</button>
+        </form>
+    </div>
+</body>
+</html>
