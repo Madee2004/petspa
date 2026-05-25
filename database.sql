@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3307
--- Tiempo de generación: 18-05-2026 a las 01:23:40
+-- Tiempo de generación: 26-05-2026 a las 00:18:53
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -134,7 +134,64 @@ INSERT INTO `audit_logs` (`id_log`, `usuario_id`, `accion`, `rol_ejecutor`, `ip_
 (41, 'ee5ede32-4dbf-11f1-95ad-d481d7b90b17', 'Activación de cuenta exitosa', 'Cliente', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36', '2026-05-12 05:03:50'),
 (42, NULL, 'Actualizó perfil de mascota: Cookie', 'Cliente', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36', '2026-05-12 05:04:50'),
 (43, NULL, 'Cierre de sesión', 'Rol 4', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36', '2026-05-12 05:05:06'),
-(44, NULL, 'Login exitoso', 'Rol 4', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36', '2026-05-12 05:05:56');
+(44, NULL, 'Login exitoso', 'Rol 4', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36', '2026-05-12 05:05:56'),
+(45, NULL, 'Login exitoso', 'Rol 1', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-25 20:20:09'),
+(46, NULL, 'Cierre de sesión', 'Rol 1', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-25 20:22:36'),
+(47, NULL, 'Intento de login fallido: cam2cdm@gmail.com', 'Visitante', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-25 20:23:14'),
+(48, NULL, 'Intento de login fallido: cam2cdm@gmail.com', 'Visitante', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-25 20:23:30'),
+(49, NULL, 'Login exitoso', 'Rol 3', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-25 20:24:29'),
+(50, NULL, 'Cierre de sesión', 'Rol 3', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-25 20:24:46'),
+(51, NULL, 'Login exitoso', 'Rol 4', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-25 20:24:58'),
+(52, NULL, 'Agendó Grooming Completo (Corte y Baño) para mascota ID: 8236aee5-4dbb-11f1-95ad-d481d7b90b17', 'Cliente', '::1', NULL, '2026-05-25 20:35:59'),
+(53, NULL, 'Cierre de sesión', 'Rol 4', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-25 20:36:34'),
+(54, NULL, 'Login exitoso', 'Rol 3', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-25 20:37:06'),
+(55, NULL, 'Cierre de sesión', 'Rol 3', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-25 20:39:54'),
+(56, NULL, 'Login exitoso', 'Rol 1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-25 20:40:03'),
+(57, NULL, 'Cita ID 56c37626-5879-11f1-8631-d481d7b90b17 confirmada.', 'Recepcion', '::1', NULL, '2026-05-25 20:44:54'),
+(58, NULL, 'Cierre de sesión', 'Rol 1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-25 20:45:08'),
+(59, NULL, 'Login exitoso', 'Rol 3', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-25 20:45:28'),
+(60, NULL, 'Cierre de sesión', 'Rol 3', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-25 20:48:49'),
+(61, NULL, 'Login exitoso', 'Rol 1', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-25 20:48:57'),
+(62, NULL, 'Cierre de sesión', 'Rol 1', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-25 20:49:57'),
+(63, NULL, 'Login exitoso', 'Rol 4', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-25 20:50:07'),
+(64, NULL, 'Cierre de sesión', 'Rol 4', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-25 20:51:04'),
+(65, NULL, 'Login exitoso', 'Rol 4', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-25 20:51:17'),
+(66, NULL, 'Completó/Actualizó su perfil', 'ID: 6607fc91-4da7-11f1-95ad-d481d7b90b17', '::1', NULL, '2026-05-25 20:56:13'),
+(67, NULL, 'Agendó Solo Baño y Secado para mascota ID: 8236aee5-4dbb-11f1-95ad-d481d7b90b17', 'Cliente', '::1', NULL, '2026-05-25 21:02:56'),
+(68, NULL, 'Cierre de sesión', 'Rol 4', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-25 21:03:42'),
+(69, NULL, 'Login exitoso', 'Rol 4', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-25 21:03:51'),
+(70, NULL, 'Completó/Actualizó su perfil', 'ID: ee5ede32-4dbf-11f1-95ad-d481d7b90b17', '::1', NULL, '2026-05-25 21:04:17'),
+(71, NULL, 'Cierre de sesión', 'Rol 4', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-25 21:20:11'),
+(72, NULL, 'Login exitoso', 'Rol 4', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-25 21:23:19'),
+(73, NULL, 'Actualizó perfil de mascota: Sussie', 'Cliente', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-25 21:27:36'),
+(74, NULL, 'Actualizó perfil de mascota: Sussie', 'Cliente', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-25 21:27:49'),
+(75, NULL, 'Agendó Solo Baño y Secado para Sussie', 'Cliente', '::1', NULL, '2026-05-25 21:28:33'),
+(76, NULL, 'Cierre de sesión', 'Rol 4', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-25 21:29:08'),
+(77, NULL, 'Login exitoso', 'Rol 1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-25 21:29:22'),
+(78, NULL, 'Cita ID 1aa0cc20-587d-11f1-8631-d481d7b90b17 confirmada.', 'Recepcion', '::1', NULL, '2026-05-25 21:29:32'),
+(79, NULL, 'Cita ID aee1c26a-5880-11f1-8631-d481d7b90b17 confirmada.', 'Recepcion', '::1', NULL, '2026-05-25 21:29:33'),
+(80, NULL, 'Cierre de sesión', 'Rol 1', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-25 21:29:37'),
+(81, NULL, 'Login exitoso', 'Rol 3', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-25 21:29:48'),
+(82, NULL, 'Servicio Cita 56c37626-5879-11f1-8631-d481d7b90b17 completado. Checklist validado. Stock descontado ID: 1', 'Groomer', '127.0.0.1', NULL, '2026-05-25 21:39:39'),
+(83, NULL, 'Servicio Cita 56c37626-5879-11f1-8631-d481d7b90b17 completado. Checklist validado. Stock descontado ID: 1', 'Groomer', '::1', NULL, '2026-05-25 21:54:46'),
+(84, NULL, 'Cierre de sesión', 'Rol 3', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-25 21:55:18'),
+(85, NULL, 'Login exitoso', 'Rol 4', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-25 21:58:40'),
+(86, NULL, 'Agendó Solo Baño y Secado para Cookie', 'Cliente', '::1', NULL, '2026-05-25 22:01:51'),
+(87, NULL, 'Cierre de sesión', 'Rol 4', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-25 22:02:11'),
+(88, NULL, 'Login exitoso', 'Rol 4', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-25 22:09:02'),
+(89, NULL, 'Agendó Solo Baño y Secado para Sussie', 'Cliente', '::1', NULL, '2026-05-25 22:10:23'),
+(90, NULL, 'Cierre de sesión', 'Rol 4', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-25 22:10:30'),
+(91, NULL, 'Login exitoso', 'Rol 1', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-25 22:10:41'),
+(92, NULL, 'Cita ID 86cb816b-5886-11f1-8631-d481d7b90b17 confirmada.', 'Recepcion', '::1', NULL, '2026-05-25 22:10:46'),
+(93, NULL, 'Cita ID 55995cb8-5885-11f1-8631-d481d7b90b17 confirmada.', 'Recepcion', '::1', NULL, '2026-05-25 22:10:48'),
+(94, NULL, 'Pago de Cita ID 86cb816b-5886-11f1-8631-d481d7b90b17 registrado vía Efectivo', 'Recepcion', '127.0.0.1', NULL, '2026-05-25 22:10:55'),
+(95, NULL, 'Pago de Cita ID aee1c26a-5880-11f1-8631-d481d7b90b17 registrado vía Transferencia', 'Recepcion', '::1', NULL, '2026-05-25 22:11:02'),
+(96, NULL, 'Cierre de sesión', 'Rol 1', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-25 22:11:23'),
+(97, NULL, 'Login exitoso', 'Rol 3', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-25 22:11:34'),
+(98, NULL, 'Cierre de sesión', 'Rol 3', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-25 22:14:31'),
+(99, NULL, 'Intento de login fallido: cmam2004@gmail.com', 'Visitante', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-25 22:14:42'),
+(100, NULL, 'Login exitoso', 'Rol 4', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-25 22:14:58'),
+(101, NULL, 'Agendó Solo Baño y Secado para Cookie', 'Cliente', '::1', NULL, '2026-05-25 22:15:44');
 
 -- --------------------------------------------------------
 
@@ -166,8 +223,25 @@ CREATE TABLE `citas` (
   `estado` enum('Pendiente','Confirmada','En Proceso','Finalizada','Cancelada') DEFAULT 'Pendiente',
   `calificacion_cliente` int(11) DEFAULT NULL CHECK (`calificacion_cliente` between 1 and 5),
   `comentario_cliente` text DEFAULT NULL,
-  `precio_total_estimado` decimal(10,2) DEFAULT 0.00
+  `precio_total_estimado` decimal(10,2) DEFAULT 0.00,
+  `metodo_pago` enum('QR','Efectivo','Transferencia','Pendiente') DEFAULT 'Pendiente',
+  `monto` decimal(10,2) DEFAULT 0.00,
+  `duracion_minutos` int(11) DEFAULT 60,
+  `servicio` varchar(100) DEFAULT 'Grooming Estándar',
+  `pago_estado` varchar(20) DEFAULT 'No Pagado'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `citas`
+--
+
+INSERT INTO `citas` (`id_cita`, `cliente_id`, `mascota_id`, `groomer_id`, `servicio_id`, `fecha_hora_inicio`, `fecha_hora_fin`, `estado`, `calificacion_cliente`, `comentario_cliente`, `precio_total_estimado`, `metodo_pago`, `monto`, `duracion_minutos`, `servicio`, `pago_estado`) VALUES
+('1aa0cc20-587d-11f1-8631-d481d7b90b17', NULL, '8236aee5-4dbb-11f1-95ad-d481d7b90b17', '4388219c-4db0-11f1-95ad-d481d7b90b17', NULL, '2026-05-28 11:00:00', NULL, 'Confirmada', NULL, NULL, NULL, 'Pendiente', 90.00, 85, 'Solo Baño y Secado', 'No Pagado'),
+('45d5396a-5887-11f1-8631-d481d7b90b17', NULL, '17b8b0fd-4dc0-11f1-95ad-d481d7b90b17', '4388219c-4db0-11f1-95ad-d481d7b90b17', NULL, '2026-05-29 08:00:00', NULL, 'Pendiente', NULL, NULL, NULL, 'Pendiente', 60.00, 55, 'Solo Baño y Secado', 'No Pagado'),
+('55995cb8-5885-11f1-8631-d481d7b90b17', NULL, '17b8b0fd-4dc0-11f1-95ad-d481d7b90b17', '4388219c-4db0-11f1-95ad-d481d7b90b17', NULL, '2026-05-28 10:00:00', NULL, 'Confirmada', NULL, NULL, NULL, 'Pendiente', 60.00, 55, 'Solo Baño y Secado', 'No Pagado'),
+('56c37626-5879-11f1-8631-d481d7b90b17', NULL, '8236aee5-4dbb-11f1-95ad-d481d7b90b17', '4388219c-4db0-11f1-95ad-d481d7b90b17', NULL, '2026-05-28 08:00:00', NULL, '', NULL, NULL, NULL, 'Pendiente', 150.00, 105, 'Grooming Completo (Corte y Baño)', 'No Pagado'),
+('86cb816b-5886-11f1-8631-d481d7b90b17', NULL, '7e363d80-5880-11f1-8631-d481d7b90b17', '4388219c-4db0-11f1-95ad-d481d7b90b17', NULL, '2026-05-28 16:00:00', NULL, 'Confirmada', NULL, NULL, NULL, 'Efectivo', 40.00, 35, 'Solo Baño y Secado', 'Pagado'),
+('aee1c26a-5880-11f1-8631-d481d7b90b17', NULL, '7e363d80-5880-11f1-8631-d481d7b90b17', '4388219c-4db0-11f1-95ad-d481d7b90b17', NULL, '2026-05-28 14:00:00', NULL, 'Confirmada', NULL, NULL, NULL, 'Transferencia', 40.00, 35, 'Solo Baño y Secado', 'Pagado');
 
 --
 -- Disparadores `citas`
@@ -367,6 +441,29 @@ DELIMITER ;
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `inventario`
+--
+
+CREATE TABLE `inventario` (
+  `id_insumo` int(11) NOT NULL,
+  `nombre` varchar(100) DEFAULT NULL,
+  `cantidad` int(11) DEFAULT NULL,
+  `stock_minimo` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `inventario`
+--
+
+INSERT INTO `inventario` (`id_insumo`, `nombre`, `cantidad`, `stock_minimo`) VALUES
+(1, 'Shampoo Estándar Cosmético', 48, 10),
+(2, 'Shampoo Medicado (Clorhexidina)', 5, 10),
+(3, 'Shampoo Hipoalergénico', 20, 5),
+(4, 'Tratamiento Deslanado', 15, 5);
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `lotes`
 --
 
@@ -422,6 +519,7 @@ CREATE TABLE `mascotas` (
 INSERT INTO `mascotas` (`id_mascota`, `propietario_id`, `nombre`, `especie`, `raza`, `fecha_nacimiento`, `peso_actual`, `alergias`, `vacunas_al_dia`, `temperamento`, `foto_url`) VALUES
 ('0fec431f-4dba-11f1-95ad-d481d7b90b17', '4387e363-4db0-11f1-95ad-d481d7b90b17', 'Cookie', 'Perro', 'Pástor Alemán', '0000-00-00', 25.00, 'Ninguna', 1, 'Tranquilo', 'pet_1778559693.jpeg'),
 ('17b8b0fd-4dc0-11f1-95ad-d481d7b90b17', 'ee5ede32-4dbf-11f1-95ad-d481d7b90b17', 'Cookie', 'Ave', 'Pollito', '0000-00-00', 0.60, 'Ninguna', 1, 'Agresivo', 'pet_1778562283.png'),
+('7e363d80-5880-11f1-8631-d481d7b90b17', '6607fc91-4da7-11f1-95ad-d481d7b90b17', 'Sussie', 'Ave', 'Urraca', '2025-05-05', 0.20, 'Ninguna', 1, 'Tranquilo', 'pet_1779744432.jpeg'),
 ('8236aee5-4dbb-11f1-95ad-d481d7b90b17', '6607fc91-4da7-11f1-95ad-d481d7b90b17', 'Derpy', 'Gato', 'Tigre Azul', '0000-00-00', 25.00, 'Ninguna', 1, 'Tranquilo', 'pet_1778560314.png');
 
 -- --------------------------------------------------------
@@ -595,10 +693,10 @@ CREATE TABLE `usuarios` (
 
 INSERT INTO `usuarios` (`id_usuario`, `rol_id`, `nombre_completo`, `ci`, `email`, `telefono`, `direccion`, `password_hash`, `esta_verificado`, `fecha_registro`, `estado`, `google_id`, `two_factor_secret`, `two_factor_enabled`, `intentos_fallidos`, `bloqueado_hasta`, `ultimo_acceso`, `cambio_password_pendiente`, `turno`, `foto_perfil`) VALUES
 ('4387e363-4db0-11f1-95ad-d481d7b90b17', 3, 'Marceline Abadeer', NULL, 'cami.aguijon@gmail.com', '2228764', NULL, '$2y$12$JyglqfPQFctPgMYSMcsRuerECgbJiqMwhnwfgrRD5xWEXAODON9zi', 1, '2026-05-12 03:11:24', 'Activo', NULL, NULL, 0, 0, NULL, NULL, 1, 'Mañana', 'default_user.png'),
-('6607fc91-4da7-11f1-95ad-d481d7b90b17', 4, 'Camila Madeleine', '13762475', 'madeleinne.2004@gmail.com', '65572349', 'Calle Casimiro Corrales N1158', '$2y$12$VF2.DNTg3Eeg/jKdh4DVJOnWbFbJKP98peL6cAs6KHj1GUZEpeWWe', 1, '2026-05-12 02:07:57', 'Activo', NULL, NULL, 0, 0, NULL, NULL, 1, 'Mañana', 'perfil_6607fc91-4da7-11f1-95ad-d481d7b90b17_1778561850.png'),
+('6607fc91-4da7-11f1-95ad-d481d7b90b17', 4, 'Camila Madeleine', '13762475', 'madeleinne.2004@gmail.com', '65572349', 'Calle Casimiro Corrales N1158', '$2y$12$VF2.DNTg3Eeg/jKdh4DVJOnWbFbJKP98peL6cAs6KHj1GUZEpeWWe', 1, '2026-05-12 02:07:57', 'Activo', NULL, NULL, 0, 0, NULL, NULL, 1, 'Mañana', 'perfil_6607fc91-4da7-11f1-95ad-d481d7b90b17_1779742573.png'),
 ('749c8a99-4dbf-11f1-95ad-d481d7b90b17', 3, 'Bonnibel Bubblegum', NULL, 'cam2cdm@gmail.com', NULL, NULL, '$2y$12$64nZtify7EFaJOOu16CNZuBKN2o42r18EP/UddF/zkbuezZ3Pdl5y', 1, '2026-05-12 05:00:09', 'Activo', NULL, NULL, 0, 0, NULL, NULL, 1, 'Tarde', 'default_user.png'),
 ('a62eae97-4da9-11f1-95ad-d481d7b90b17', 1, 'Administrador Central', NULL, 'caguilarm@fcpn.edu.bo', NULL, NULL, '$2y$12$09j5s4bkAh8bbOYUETDG5Oew4f.5N.VHyVjmkHuexZF4XLXZmgNfW', 1, '2026-05-12 02:24:03', 'Activo', NULL, NULL, 0, 0, NULL, NULL, 1, 'Mañana', 'default_user.png'),
-('ee5ede32-4dbf-11f1-95ad-d481d7b90b17', 4, 'Camila Madeleine', NULL, 'cmam2004@gmail.com', NULL, NULL, '$2y$12$lWx84hgt/zLjv5I96UOVU.qx3CCbZtSdngxlC3bHxNqv3is7d/l7W', 1, '2026-05-12 05:03:33', 'Activo', NULL, NULL, 0, 0, NULL, NULL, 1, 'Mañana', 'default_user.png');
+('ee5ede32-4dbf-11f1-95ad-d481d7b90b17', 4, 'Camila Madeleine', '112', 'cmam2004@gmail.com', '123', 'Calle casimiro corrales', '$2y$12$lWx84hgt/zLjv5I96UOVU.qx3CCbZtSdngxlC3bHxNqv3is7d/l7W', 1, '2026-05-12 05:03:33', 'Activo', NULL, NULL, 0, 0, NULL, NULL, 1, 'Mañana', 'default_user.png');
 
 -- --------------------------------------------------------
 
@@ -721,6 +819,12 @@ ALTER TABLE `insumos_cita`
   ADD KEY `producto_id` (`producto_id`);
 
 --
+-- Indices de la tabla `inventario`
+--
+ALTER TABLE `inventario`
+  ADD PRIMARY KEY (`id_insumo`);
+
+--
 -- Indices de la tabla `lotes`
 --
 ALTER TABLE `lotes`
@@ -819,7 +923,13 @@ ALTER TABLE `ventas`
 -- AUTO_INCREMENT de la tabla `audit_logs`
 --
 ALTER TABLE `audit_logs`
-  MODIFY `id_log` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `id_log` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=102;
+
+--
+-- AUTO_INCREMENT de la tabla `inventario`
+--
+ALTER TABLE `inventario`
+  MODIFY `id_insumo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `permisos`

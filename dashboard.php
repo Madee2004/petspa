@@ -58,6 +58,7 @@ $tiene_mascotas = (count($lista_mascotas) > 0);
             <a href="logout.php" class="btn-logout">🚪 Cerrar Sesión</a>
         </nav>
     </div>
+    
 
     <div class="main-content">
         <h1>Bienvenido, <?php echo explode(' ', $u['nombre_completo'])[0]; ?></h1>
@@ -103,6 +104,58 @@ $tiene_mascotas = (count($lista_mascotas) > 0);
                 <a href="agendar_cita.php" class="btn-active">Agendar Nueva Cita</a>
             <?php else: ?>
                 <p style="color: #e74c3c;">Completa tu perfil y registra una mascota para habilitar las reservas.</p>
+            <?php endif; ?>
+        </section>
+        <hr style="margin: 40px 0; border: 0; border-top: 1px solid #ddd;">
+        
+        <section>
+            <h3>🧾 Historial de Mis Citas</h3>
+            <?php
+            // Consultar las citas del cliente
+            $sqlMisCitas = "SELECT c.*, m.nombre as mascota, u.nombre_completo as groomer 
+                            FROM citas c 
+                            JOIN mascotas m ON c.mascota_id = m.id_mascota 
+                            JOIN groomers g ON c.groomer_id = g.id_groomer
+                            JOIN usuarios u ON g.usuario_id = u.id_usuario
+                            WHERE m.propietario_id = ? ORDER BY c.fecha_hora_inicio DESC";
+            $mis_citas = $pdo->prepare($sqlMisCitas);
+            $mis_citas->execute([$_SESSION['usuario_id']]);
+            $citas_cliente = $mis_citas->fetchAll();
+            
+            // Lógica rápida para cancelar cita si el cliente hace clic
+            if (isset($_GET['cancelar_cita'])) {
+                $pdo->prepare("UPDATE citas SET estado = 'Cancelada' WHERE id_cita = ?")->execute([$_GET['cancelar_cita']]);
+                echo "<script>window.location.href='dashboard.php';</script>";
+            }
+            ?>
+
+            <?php if (count($citas_cliente) > 0): ?>
+                <table style="width: 100%; background: white; border-collapse: collapse; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+                    <tr style="background: #2d3436; color: white;">
+                        <th style="padding: 12px; text-align: left;">Fecha / Hora</th>
+                        <th style="padding: 12px; text-align: left;">Mascota</th>
+                        <th style="padding: 12px; text-align: left;">Estilista</th>
+                        <th style="padding: 12px; text-align: left;">Estado</th>
+                        <th style="padding: 12px; text-align: center;">Acción</th>
+                    </tr>
+                    <?php foreach ($citas_cliente as $cita): ?>
+                    <tr style="border-bottom: 1px solid #eee;">
+                        <td style="padding: 12px;"><b><?php echo date('d/m/Y', strtotime($cita['fecha_hora_inicio'])); ?></b><br><small><?php echo date('H:i A', strtotime($cita['fecha_hora_inicio'])); ?></small></td>
+                        <td style="padding: 12px;"><?php echo htmlspecialchars($cita['mascota']); ?><br><small><?php echo $cita['servicio']; ?></small></td>
+                        <td style="padding: 12px;"><?php echo htmlspecialchars($cita['groomer']); ?></td>
+                        <td style="padding: 12px;"><b><?php echo $cita['estado']; ?></b></td>
+                        <td style="padding: 12px; text-align: center;">
+                            <?php if ($cita['estado'] === 'Pendiente' || $cita['estado'] === 'Confirmada'): ?>
+                                <a href="dashboard.php?cancelar_cita=<?php echo $cita['id_cita']; ?>" style="background: #e74c3c; color: white; padding: 6px 10px; border-radius: 4px; text-decoration: none; font-size: 12px;" onclick="return confirm('¿Seguro que deseas cancelar esta cita?');">Cancelar</a>
+                            <?php else: ?>
+                                <span style="color: #bdc3c7; font-size: 12px;">No disponible</span>
+                            <?php endif; ?>
+                        </td>
+                    </tr>
+                    <?php endforeach; ?>
+                </table>
+            <?php else: ?>
+                <p style="color: #7f8c8d;">Aún no has agendado ninguna cita.</p>
             <?php endif; ?>
         </section>
     </div>
