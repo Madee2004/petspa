@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3307
--- Tiempo de generación: 26-05-2026 a las 00:18:53
+-- Tiempo de generación: 01-06-2026 a las 03:10:18
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -191,7 +191,58 @@ INSERT INTO `audit_logs` (`id_log`, `usuario_id`, `accion`, `rol_ejecutor`, `ip_
 (98, NULL, 'Cierre de sesión', 'Rol 3', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-25 22:14:31'),
 (99, NULL, 'Intento de login fallido: cmam2004@gmail.com', 'Visitante', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-25 22:14:42'),
 (100, NULL, 'Login exitoso', 'Rol 4', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-25 22:14:58'),
-(101, NULL, 'Agendó Solo Baño y Secado para Cookie', 'Cliente', '::1', NULL, '2026-05-25 22:15:44');
+(101, NULL, 'Agendó Solo Baño y Secado para Cookie', 'Cliente', '::1', NULL, '2026-05-25 22:15:44'),
+(102, NULL, 'Login exitoso', 'Rol 3', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-28 15:05:36'),
+(103, NULL, 'Servicio Cita 55995cb8-5885-11f1-8631-d481d7b90b17 completado. Checklist validado. Stock descontado ID: 1', 'Groomer', '::1', NULL, '2026-05-28 15:06:20'),
+(104, NULL, 'Servicio Cita 1aa0cc20-587d-11f1-8631-d481d7b90b17 completado. Checklist validado. Stock descontado ID: 1', 'Groomer', '::1', NULL, '2026-05-28 15:06:39'),
+(105, NULL, 'Login exitoso', 'Rol 4', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-31 19:21:59'),
+(106, NULL, 'Cierre de sesión', 'Rol 4', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-31 19:22:09'),
+(107, NULL, 'Login exitoso', 'Rol 1', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-31 19:22:25'),
+(108, NULL, 'Cambio de contraseña administrativa exitoso', 'Admin', '::1', NULL, '2026-05-31 19:22:41'),
+(109, NULL, 'Cita ID 45d5396a-5887-11f1-8631-d481d7b90b17 confirmada.', 'Recepcion', '::1', NULL, '2026-05-31 19:22:59'),
+(110, NULL, 'Pago de Cita ID 45d5396a-5887-11f1-8631-d481d7b90b17 registrado vía QR', 'Recepcion', '::1', NULL, '2026-05-31 19:23:11'),
+(111, NULL, 'Cierre de sesión', 'Rol 1', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-31 19:26:09'),
+(112, NULL, 'Login exitoso', 'Rol 4', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-31 19:26:20'),
+(113, NULL, 'Intento de login fallido: madeleinne.2004@gmail.com', 'Visitante', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-31 19:26:53'),
+(114, NULL, 'Login exitoso', 'Rol 1', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-31 19:27:36'),
+(115, NULL, 'Cierre de sesión', 'Rol 1', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-31 19:38:37'),
+(116, NULL, 'Login exitoso', 'Rol 3', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-31 19:38:48'),
+(117, NULL, 'Cierre de sesión', 'Rol 3', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-31 21:48:28'),
+(118, NULL, 'Login exitoso', 'Rol 1', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-31 21:48:49'),
+(119, NULL, 'Cierre de sesión', 'Rol 1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-31 21:54:56'),
+(120, NULL, 'Login exitoso', 'Rol 3', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-31 21:55:05'),
+(121, NULL, 'Cierre de sesión', 'Rol 3', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-31 21:58:44'),
+(122, NULL, 'Login exitoso', 'Rol 1', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-31 21:58:53'),
+(123, NULL, 'Cierre de sesión', 'Rol 1', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-31 21:59:16'),
+(124, NULL, 'Login exitoso', 'Rol 4', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-31 21:59:38'),
+(125, NULL, 'Agendó Spa Premium (Deslanado y Masaje) para Derpy', 'Cliente', '127.0.0.1', NULL, '2026-05-31 22:00:37'),
+(126, NULL, 'Cierre de sesión', 'Rol 4', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-31 22:01:08'),
+(127, NULL, 'Login exitoso', 'Rol 4', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-31 22:01:16'),
+(128, NULL, 'Cierre de sesión', 'Rol 4', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-31 22:02:39'),
+(129, NULL, 'Login exitoso', 'Rol 1', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-31 22:02:58'),
+(130, NULL, 'Cierre de sesión', 'Rol 1', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-31 22:27:45'),
+(131, NULL, 'Login exitoso', 'Rol 4', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-31 22:27:54'),
+(132, NULL, 'Agendó Grooming Completo (Corte y Baño) (Extras: Corte de Uñas, Limpieza de Oídos, Corte Higiénico) para Derpy', 'Cliente', '::1', NULL, '2026-05-31 22:29:59'),
+(133, NULL, 'Cierre de sesión', 'Rol 4', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-31 22:30:45'),
+(134, NULL, 'Login exitoso', 'Rol 3', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-31 22:30:59'),
+(135, NULL, 'Servicio Cita aee1c26a-5880-11f1-8631-d481d7b90b17 completado. Checklist validado. Stock descontado ID: 1', 'Groomer', '::1', NULL, '2026-05-31 22:31:10'),
+(136, NULL, 'Servicio Cita aee1c26a-5880-11f1-8631-d481d7b90b17 completado. Checklist validado. Stock descontado ID: 1', 'Groomer', '::1', NULL, '2026-05-31 22:36:58'),
+(137, NULL, 'Cierre de sesión', 'Rol 3', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-31 22:37:49'),
+(138, NULL, 'Login exitoso', 'Rol 1', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-31 22:38:04'),
+(139, NULL, 'Cierre de sesión', 'Rol 1', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-31 23:10:32'),
+(140, NULL, 'Login exitoso', 'Rol 4', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-31 23:10:41'),
+(141, NULL, 'Cierre de sesión', 'Rol 4', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-31 23:18:52'),
+(142, NULL, 'Login exitoso', 'Rol 4', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-31 23:19:03'),
+(143, NULL, 'Cierre de sesión', 'Rol 4', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-31 23:48:27'),
+(144, NULL, 'Login exitoso', 'Rol 1', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-31 23:57:53'),
+(145, NULL, 'Cierre de sesión', 'Rol 1', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-05-31 23:59:56'),
+(146, NULL, 'Login exitoso', 'Rol 1', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-06-01 00:05:33'),
+(147, NULL, 'Cierre de sesión', 'Rol 1', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-06-01 00:15:53'),
+(148, NULL, 'Login exitoso', 'Rol 3', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-06-01 00:16:02'),
+(149, NULL, 'Servicio Cita 86cb816b-5886-11f1-8631-d481d7b90b17 completado. Uso: 5 ml de insumo ID: e6b7ac18-5d45-11f1-8f36-d481d7b90b17', 'Groomer', '::1', NULL, '2026-06-01 00:19:14'),
+(150, NULL, 'Cierre de sesión', 'Rol 3', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-06-01 00:19:48'),
+(151, NULL, 'Login exitoso', 'Rol 4', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-06-01 00:20:03'),
+(152, NULL, 'Cierre de sesión', 'Rol 4', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', '2026-06-01 00:21:25');
 
 -- --------------------------------------------------------
 
@@ -236,12 +287,14 @@ CREATE TABLE `citas` (
 --
 
 INSERT INTO `citas` (`id_cita`, `cliente_id`, `mascota_id`, `groomer_id`, `servicio_id`, `fecha_hora_inicio`, `fecha_hora_fin`, `estado`, `calificacion_cliente`, `comentario_cliente`, `precio_total_estimado`, `metodo_pago`, `monto`, `duracion_minutos`, `servicio`, `pago_estado`) VALUES
-('1aa0cc20-587d-11f1-8631-d481d7b90b17', NULL, '8236aee5-4dbb-11f1-95ad-d481d7b90b17', '4388219c-4db0-11f1-95ad-d481d7b90b17', NULL, '2026-05-28 11:00:00', NULL, 'Confirmada', NULL, NULL, NULL, 'Pendiente', 90.00, 85, 'Solo Baño y Secado', 'No Pagado'),
-('45d5396a-5887-11f1-8631-d481d7b90b17', NULL, '17b8b0fd-4dc0-11f1-95ad-d481d7b90b17', '4388219c-4db0-11f1-95ad-d481d7b90b17', NULL, '2026-05-29 08:00:00', NULL, 'Pendiente', NULL, NULL, NULL, 'Pendiente', 60.00, 55, 'Solo Baño y Secado', 'No Pagado'),
-('55995cb8-5885-11f1-8631-d481d7b90b17', NULL, '17b8b0fd-4dc0-11f1-95ad-d481d7b90b17', '4388219c-4db0-11f1-95ad-d481d7b90b17', NULL, '2026-05-28 10:00:00', NULL, 'Confirmada', NULL, NULL, NULL, 'Pendiente', 60.00, 55, 'Solo Baño y Secado', 'No Pagado'),
+('1aa0cc20-587d-11f1-8631-d481d7b90b17', NULL, '8236aee5-4dbb-11f1-95ad-d481d7b90b17', '4388219c-4db0-11f1-95ad-d481d7b90b17', NULL, '2026-05-28 11:00:00', NULL, '', NULL, NULL, NULL, 'Pendiente', 90.00, 85, 'Solo Baño y Secado', 'No Pagado'),
+('27ffc403-5d3c-11f1-8f36-d481d7b90b17', NULL, '8236aee5-4dbb-11f1-95ad-d481d7b90b17', '749ca058-4dbf-11f1-95ad-d481d7b90b17', NULL, '2026-06-01 10:00:00', NULL, 'Pendiente', NULL, NULL, NULL, 'Pendiente', 210.00, 150, 'Spa Premium (Deslanado y Masaje)', 'No Pagado'),
+('41fb5657-5d40-11f1-8f36-d481d7b90b17', NULL, '8236aee5-4dbb-11f1-95ad-d481d7b90b17', '749ca058-4dbf-11f1-95ad-d481d7b90b17', NULL, '2026-06-02 09:30:00', NULL, 'Pendiente', NULL, '', NULL, 'Pendiente', 195.00, 155, 'Grooming Completo (Corte y Baño) (Extras: Corte de Uñas, Limpieza de Oídos, Corte Higiénico)', 'No Pagado'),
+('45d5396a-5887-11f1-8631-d481d7b90b17', NULL, '17b8b0fd-4dc0-11f1-95ad-d481d7b90b17', '4388219c-4db0-11f1-95ad-d481d7b90b17', NULL, '2026-05-29 08:00:00', NULL, 'Confirmada', NULL, NULL, NULL, 'QR', 60.00, 55, 'Solo Baño y Secado', 'Pagado'),
+('55995cb8-5885-11f1-8631-d481d7b90b17', NULL, '17b8b0fd-4dc0-11f1-95ad-d481d7b90b17', '4388219c-4db0-11f1-95ad-d481d7b90b17', NULL, '2026-05-28 10:00:00', NULL, '', NULL, NULL, NULL, 'Pendiente', 60.00, 55, 'Solo Baño y Secado', 'No Pagado'),
 ('56c37626-5879-11f1-8631-d481d7b90b17', NULL, '8236aee5-4dbb-11f1-95ad-d481d7b90b17', '4388219c-4db0-11f1-95ad-d481d7b90b17', NULL, '2026-05-28 08:00:00', NULL, '', NULL, NULL, NULL, 'Pendiente', 150.00, 105, 'Grooming Completo (Corte y Baño)', 'No Pagado'),
-('86cb816b-5886-11f1-8631-d481d7b90b17', NULL, '7e363d80-5880-11f1-8631-d481d7b90b17', '4388219c-4db0-11f1-95ad-d481d7b90b17', NULL, '2026-05-28 16:00:00', NULL, 'Confirmada', NULL, NULL, NULL, 'Efectivo', 40.00, 35, 'Solo Baño y Secado', 'Pagado'),
-('aee1c26a-5880-11f1-8631-d481d7b90b17', NULL, '7e363d80-5880-11f1-8631-d481d7b90b17', '4388219c-4db0-11f1-95ad-d481d7b90b17', NULL, '2026-05-28 14:00:00', NULL, 'Confirmada', NULL, NULL, NULL, 'Transferencia', 40.00, 35, 'Solo Baño y Secado', 'Pagado');
+('86cb816b-5886-11f1-8631-d481d7b90b17', NULL, '7e363d80-5880-11f1-8631-d481d7b90b17', '4388219c-4db0-11f1-95ad-d481d7b90b17', NULL, '2026-05-28 16:00:00', NULL, 'Finalizada', NULL, NULL, NULL, 'Efectivo', 40.00, 35, 'Solo Baño y Secado', 'Pagado'),
+('aee1c26a-5880-11f1-8631-d481d7b90b17', NULL, '7e363d80-5880-11f1-8631-d481d7b90b17', '4388219c-4db0-11f1-95ad-d481d7b90b17', NULL, '2026-05-28 14:00:00', NULL, 'Finalizada', NULL, NULL, NULL, 'Transferencia', 40.00, 35, 'Solo Baño y Secado', 'Pagado');
 
 --
 -- Disparadores `citas`
@@ -292,6 +345,26 @@ CREATE TABLE `detalles_alimento` (
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `detalles_insumo`
+--
+
+CREATE TABLE `detalles_insumo` (
+  `id_producto` varchar(36) NOT NULL,
+  `unidad_medida` varchar(20) DEFAULT 'ml',
+  `contenido_por_envase` int(11) NOT NULL,
+  `ml_totales` decimal(10,2) DEFAULT 0.00
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `detalles_insumo`
+--
+
+INSERT INTO `detalles_insumo` (`id_producto`, `unidad_medida`, `contenido_por_envase`, `ml_totales`) VALUES
+('e6b7ac18-5d45-11f1-8f36-d481d7b90b17', 'ml', 347, 1730.00);
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `detalles_juguete`
 --
 
@@ -316,6 +389,13 @@ CREATE TABLE `detalles_ropa` (
   `temporada` varchar(30) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Volcado de datos para la tabla `detalles_ropa`
+--
+
+INSERT INTO `detalles_ropa` (`id_producto`, `talla`, `color`, `tipo_tela`, `temporada`) VALUES
+('fb790215-5d4e-11f1-8f36-d481d7b90b17', 'S', 'Rojo', 'Polar', 'Invierno');
+
 -- --------------------------------------------------------
 
 --
@@ -329,6 +409,24 @@ CREATE TABLE `detalle_ventas_productos` (
   `cantidad` int(11) DEFAULT NULL,
   `subtotal` decimal(10,2) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `detalle_ventas_productos`
+--
+
+INSERT INTO `detalle_ventas_productos` (`id_detalle`, `venta_id`, `producto_id`, `cantidad`, `subtotal`) VALUES
+('2b55125d-5d47-11f1-8f36-d481d7b90b17', '2b54e624-5d47-11f1-8f36-d481d7b90b17', 'ec9027ed-5d3f-11f1-8f36-d481d7b90b17', 1, 85.00),
+('2b5527e4-5d47-11f1-8f36-d481d7b90b17', '2b54e624-5d47-11f1-8f36-d481d7b90b17', 'e6b7ac18-5d45-11f1-8f36-d481d7b90b17', 1, 85.00),
+('5755c29a-5d4a-11f1-8f36-d481d7b90b17', '5755993d-5d4a-11f1-8f36-d481d7b90b17', 'ec9027ed-5d3f-11f1-8f36-d481d7b90b17', 1, 85.00),
+('94abb38c-5d46-11f1-8f36-d481d7b90b17', '94ab83ba-5d46-11f1-8f36-d481d7b90b17', 'ec9027ed-5d3f-11f1-8f36-d481d7b90b17', 4, 340.00),
+('a34d6c4a-5d4a-11f1-8f36-d481d7b90b17', 'a34d35cb-5d4a-11f1-8f36-d481d7b90b17', 'e6b7ac18-5d45-11f1-8f36-d481d7b90b17', 1, 85.00),
+('b025e137-5d49-11f1-8f36-d481d7b90b17', 'b025b7f9-5d49-11f1-8f36-d481d7b90b17', 'ec9027ed-5d3f-11f1-8f36-d481d7b90b17', 1, 85.00),
+('b025fa33-5d49-11f1-8f36-d481d7b90b17', 'b025b7f9-5d49-11f1-8f36-d481d7b90b17', 'e6b7ac18-5d45-11f1-8f36-d481d7b90b17', 1, 85.00),
+('b600d027-5d4f-11f1-8f36-d481d7b90b17', 'b6009be1-5d4f-11f1-8f36-d481d7b90b17', 'fb790215-5d4e-11f1-8f36-d481d7b90b17', 1, 50.00),
+('b600e529-5d4f-11f1-8f36-d481d7b90b17', 'b6009be1-5d4f-11f1-8f36-d481d7b90b17', 'e6b7ac18-5d45-11f1-8f36-d481d7b90b17', 1, 85.00),
+('d28d1d5a-5d49-11f1-8f36-d481d7b90b17', 'd28ce8f4-5d49-11f1-8f36-d481d7b90b17', 'e6b7ac18-5d45-11f1-8f36-d481d7b90b17', 1, 85.00),
+('ff84a1db-5d45-11f1-8f36-d481d7b90b17', 'ff844786-5d45-11f1-8f36-d481d7b90b17', 'e6b7ac18-5d45-11f1-8f36-d481d7b90b17', 1, 85.00),
+('ff84d794-5d45-11f1-8f36-d481d7b90b17', 'ff844786-5d45-11f1-8f36-d481d7b90b17', 'ec9027ed-5d3f-11f1-8f36-d481d7b90b17', 1, 85.00);
 
 -- --------------------------------------------------------
 
@@ -456,7 +554,7 @@ CREATE TABLE `inventario` (
 --
 
 INSERT INTO `inventario` (`id_insumo`, `nombre`, `cantidad`, `stock_minimo`) VALUES
-(1, 'Shampoo Estándar Cosmético', 48, 10),
+(1, 'Shampoo Estándar Cosmético', 44, 10),
 (2, 'Shampoo Medicado (Clorhexidina)', 5, 10),
 (3, 'Shampoo Hipoalergénico', 20, 5),
 (4, 'Tratamiento Deslanado', 15, 5);
@@ -574,8 +672,18 @@ CREATE TABLE `productos` (
   `stock_actual` int(11) DEFAULT 0,
   `stock_minimo` int(11) DEFAULT 5,
   `precio_venta` decimal(10,2) DEFAULT NULL,
-  `es_insumo_grooming` tinyint(1) DEFAULT 0
+  `es_insumo_grooming` tinyint(1) DEFAULT 0,
+  `foto_url` varchar(255) DEFAULT 'default_product.png'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `productos`
+--
+
+INSERT INTO `productos` (`id_producto`, `nombre`, `tipo_producto`, `stock_actual`, `stock_minimo`, `precio_venta`, `es_insumo_grooming`, `foto_url`) VALUES
+('e6b7ac18-5d45-11f1-8f36-d481d7b90b17', 'Shampoo Pelos Claros', 'Insumo_Spa', 5, 5, 85.00, 2, 'prod_1780269018.png'),
+('ec9027ed-5d3f-11f1-8f36-d481d7b90b17', 'Shampoo Pelos Claros', 'Insumo_Spa', 3, 5, 85.00, 2, 'prod_1780266455.png'),
+('fb790215-5d4e-11f1-8f36-d481d7b90b17', 'Vestido de Navidad', 'Ropa', 5, 5, 50.00, 0, 'prod_1780272918.jpeg');
 
 -- --------------------------------------------------------
 
@@ -695,7 +803,7 @@ INSERT INTO `usuarios` (`id_usuario`, `rol_id`, `nombre_completo`, `ci`, `email`
 ('4387e363-4db0-11f1-95ad-d481d7b90b17', 3, 'Marceline Abadeer', NULL, 'cami.aguijon@gmail.com', '2228764', NULL, '$2y$12$JyglqfPQFctPgMYSMcsRuerECgbJiqMwhnwfgrRD5xWEXAODON9zi', 1, '2026-05-12 03:11:24', 'Activo', NULL, NULL, 0, 0, NULL, NULL, 1, 'Mañana', 'default_user.png'),
 ('6607fc91-4da7-11f1-95ad-d481d7b90b17', 4, 'Camila Madeleine', '13762475', 'madeleinne.2004@gmail.com', '65572349', 'Calle Casimiro Corrales N1158', '$2y$12$VF2.DNTg3Eeg/jKdh4DVJOnWbFbJKP98peL6cAs6KHj1GUZEpeWWe', 1, '2026-05-12 02:07:57', 'Activo', NULL, NULL, 0, 0, NULL, NULL, 1, 'Mañana', 'perfil_6607fc91-4da7-11f1-95ad-d481d7b90b17_1779742573.png'),
 ('749c8a99-4dbf-11f1-95ad-d481d7b90b17', 3, 'Bonnibel Bubblegum', NULL, 'cam2cdm@gmail.com', NULL, NULL, '$2y$12$64nZtify7EFaJOOu16CNZuBKN2o42r18EP/UddF/zkbuezZ3Pdl5y', 1, '2026-05-12 05:00:09', 'Activo', NULL, NULL, 0, 0, NULL, NULL, 1, 'Tarde', 'default_user.png'),
-('a62eae97-4da9-11f1-95ad-d481d7b90b17', 1, 'Administrador Central', NULL, 'caguilarm@fcpn.edu.bo', NULL, NULL, '$2y$12$09j5s4bkAh8bbOYUETDG5Oew4f.5N.VHyVjmkHuexZF4XLXZmgNfW', 1, '2026-05-12 02:24:03', 'Activo', NULL, NULL, 0, 0, NULL, NULL, 1, 'Mañana', 'default_user.png'),
+('a62eae97-4da9-11f1-95ad-d481d7b90b17', 1, 'Administrador Central', NULL, 'caguilarm@fcpn.edu.bo', NULL, NULL, '$2y$12$tZIPTG8y00jnisLdzWZpN.BgnC38YpAidU8O.uzu0k.4sKmOGuJIW', 1, '2026-05-12 02:24:03', 'Activo', NULL, NULL, 0, 0, NULL, NULL, 1, 'Mañana', 'default_user.png'),
 ('ee5ede32-4dbf-11f1-95ad-d481d7b90b17', 4, 'Camila Madeleine', '112', 'cmam2004@gmail.com', '123', 'Calle casimiro corrales', '$2y$12$lWx84hgt/zLjv5I96UOVU.qx3CCbZtSdngxlC3bHxNqv3is7d/l7W', 1, '2026-05-12 05:03:33', 'Activo', NULL, NULL, 0, 0, NULL, NULL, 1, 'Mañana', 'default_user.png');
 
 -- --------------------------------------------------------
@@ -725,8 +833,24 @@ CREATE TABLE `ventas` (
   `cita_id` varchar(36) DEFAULT NULL,
   `total` decimal(10,2) NOT NULL,
   `metodo_pago` enum('Efectivo','Transferencia','QR','Tarjeta') DEFAULT NULL,
-  `fecha_venta` timestamp NOT NULL DEFAULT current_timestamp()
+  `fecha_venta` timestamp NOT NULL DEFAULT current_timestamp(),
+  `codigo_recojo` varchar(15) DEFAULT NULL,
+  `estado_pedido` enum('Pendiente','Pagado','Entregado','Cancelado') DEFAULT 'Pendiente'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `ventas`
+--
+
+INSERT INTO `ventas` (`id_venta`, `cliente_id`, `cita_id`, `total`, `metodo_pago`, `fecha_venta`, `codigo_recojo`, `estado_pedido`) VALUES
+('2b54e624-5d47-11f1-8f36-d481d7b90b17', 'ee5ede32-4dbf-11f1-95ad-d481d7b90b17', NULL, 170.00, 'Transferencia', '2026-05-31 23:19:23', NULL, 'Pendiente'),
+('5755993d-5d4a-11f1-8f36-d481d7b90b17', 'ee5ede32-4dbf-11f1-95ad-d481d7b90b17', NULL, 85.00, 'QR', '2026-05-31 23:42:05', 'PED-8505C', 'Cancelado'),
+('94ab83ba-5d46-11f1-8f36-d481d7b90b17', '6607fc91-4da7-11f1-95ad-d481d7b90b17', NULL, 340.00, 'Transferencia', '2026-05-31 23:15:10', NULL, 'Pendiente'),
+('a34d35cb-5d4a-11f1-8f36-d481d7b90b17', 'ee5ede32-4dbf-11f1-95ad-d481d7b90b17', NULL, 85.00, 'QR', '2026-05-31 23:44:12', 'PED-E1AD1', 'Cancelado'),
+('b025b7f9-5d49-11f1-8f36-d481d7b90b17', 'ee5ede32-4dbf-11f1-95ad-d481d7b90b17', NULL, 170.00, 'QR', '2026-05-31 23:37:24', 'PED-A0894', 'Cancelado'),
+('b6009be1-5d4f-11f1-8f36-d481d7b90b17', '6607fc91-4da7-11f1-95ad-d481d7b90b17', NULL, 135.00, 'QR', '2026-06-01 00:20:31', 'PED-0521B', 'Cancelado'),
+('d28ce8f4-5d49-11f1-8f36-d481d7b90b17', 'ee5ede32-4dbf-11f1-95ad-d481d7b90b17', NULL, 85.00, 'QR', '2026-05-31 23:38:22', 'PED-DA8A1', 'Cancelado'),
+('ff844786-5d45-11f1-8f36-d481d7b90b17', '6607fc91-4da7-11f1-95ad-d481d7b90b17', NULL, 170.00, 'Transferencia', '2026-05-31 23:11:00', NULL, 'Pendiente');
 
 --
 -- Índices para tablas volcadas
@@ -760,6 +884,12 @@ ALTER TABLE `citas`
 -- Indices de la tabla `detalles_alimento`
 --
 ALTER TABLE `detalles_alimento`
+  ADD PRIMARY KEY (`id_producto`);
+
+--
+-- Indices de la tabla `detalles_insumo`
+--
+ALTER TABLE `detalles_insumo`
   ADD PRIMARY KEY (`id_producto`);
 
 --
@@ -923,7 +1053,7 @@ ALTER TABLE `ventas`
 -- AUTO_INCREMENT de la tabla `audit_logs`
 --
 ALTER TABLE `audit_logs`
-  MODIFY `id_log` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=102;
+  MODIFY `id_log` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=153;
 
 --
 -- AUTO_INCREMENT de la tabla `inventario`
@@ -973,6 +1103,12 @@ ALTER TABLE `citas`
 --
 ALTER TABLE `detalles_alimento`
   ADD CONSTRAINT `detalles_alimento_ibfk_1` FOREIGN KEY (`id_producto`) REFERENCES `productos` (`id_producto`) ON DELETE CASCADE;
+
+--
+-- Filtros para la tabla `detalles_insumo`
+--
+ALTER TABLE `detalles_insumo`
+  ADD CONSTRAINT `detalles_insumo_ibfk_1` FOREIGN KEY (`id_producto`) REFERENCES `productos` (`id_producto`) ON DELETE CASCADE;
 
 --
 -- Filtros para la tabla `detalles_juguete`
