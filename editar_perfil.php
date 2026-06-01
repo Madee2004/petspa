@@ -2,7 +2,10 @@
 // C:\xampp\htdocs\petspa\editar_perfil.php
 require 'auth_check.php';
 require 'db.php';
-
+if ($_SESSION['rol'] != 4) { 
+    header("Location: index.php"); 
+    exit(); 
+}
 $id_usuario = $_SESSION['usuario_id'];
 
 // Obtener datos actuales

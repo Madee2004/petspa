@@ -87,7 +87,7 @@ $citas_maestras = $pdo->query($sqlMaster)->fetchAll();
         <hr style="border: 0; border-top: 1px solid #4f5d73; margin: 20px 0;">
         <nav>
             <p><a href="recepcion_dashboard.php" style="color: white; text-decoration: none;">🗓️ Calendario Maestro</a></p>
-            <p><a href="editar_perfil.php" style="color: white; text-decoration: none;">📝 Mi Perfil</a></p>
+            <p><a href="admin_dashboard.php" style="color: white; text-decoration: none;">📝 Mi Perfil</a></p>
             <p><a href="logout.php" style="color: #ff7675; text-decoration: none; font-weight: bold;">🚪 Cerrar Sesión</a></p>
         </nav>
     </div>
@@ -105,7 +105,8 @@ $citas_maestras = $pdo->query($sqlMaster)->fetchAll();
                     <?php foreach ($alertas_stock as $item): ?>
                         <li style="margin-bottom: 5px;">
                             <b><?php echo htmlspecialchars($item['nombre']); ?></b> - Quedan: <?php echo $item['cantidad']; ?> unidades.
-                            <a href="https://wa.me/59170000000?text=<?php echo urlencode('Hola, solicito reabastecimiento de: ' . $item['nombre']); ?>" target="_blank" style="margin-left: 10px; color: #25D366; font-weight: bold; text-decoration: none;">📱 Pedir a Proveedor (WhatsApp)</a>
+                        <!-- Aquí se pone el nro del proveedor para pedir más de algo-->
+                            <a href="https://wa.me/59100000000?text=<?php echo urlencode('Hola, solicito reabastecimiento de: ' . $item['nombre']); ?>" target="_blank" style="margin-left: 10px; color: #25D366; font-weight: bold; text-decoration: none;">📱 Pedir a Proveedor (WhatsApp)</a>
                         </li>
                     <?php endforeach; ?>
                 </ul>

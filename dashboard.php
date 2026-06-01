@@ -55,6 +55,7 @@ $tiene_mascotas = (count($lista_mascotas) > 0);
             <a href="dashboard.php">🏠 Inicio</a>
             <a href="editar_perfil.php">📝 Editar Mi Perfil</a>
             <a href="cambiar_password.php">🔐 Seguridad</a>
+            <a href="catalogo.php">🛍️ Comprar Productos</a>
             <a href="logout.php" class="btn-logout">🚪 Cerrar Sesión</a>
         </nav>
     </div>
@@ -156,6 +157,109 @@ $tiene_mascotas = (count($lista_mascotas) > 0);
                 </table>
             <?php else: ?>
                 <p style="color: #7f8c8d;">Aún no has agendado ninguna cita.</p>
+            <?php endif; ?>
+        </section>
+
+        <hr style="margin: 40px 0; border: 0; border-top: 1px solid #ddd;">
+        
+        <section>
+            <h3>🛍️ Mis Pedidos de la Tienda</h3>
+            <?php
+            // LÓGICA PARA CANCELAR PEDIDO Y ENVIAR TELEGRAM
+            if (isset($_GET['cancelar_pedido'])) {
+                $id_venta_cancelar = $_GET['cancelar_pedido'];
+                
+                // 1. Obtener detalles del pedido para el mensaje
+                $stmtDetalle = $pdo->prepare("SELECT v.codigo_recojo, u.nombre_completo 
+                                              FROM ventas v 
+                                              JOIN usuarios u ON v.cliente_id = u.id_usuario 
+                                              WHERE v.id_venta = ?");
+                $stmtDetalle->execute([$id_venta_cancelar]);
+                $info_pedido = $stmtDetalle->fetch();
+
+                if ($info_pedido) {
+                    // 2. Devolver el stock de los productos cancelados a la tienda
+                    $stmtItems = $pdo->prepare("SELECT producto_id, cantidad FROM detalle_ventas_productos WHERE venta_id = ?");
+                    $stmtItems->execute([$id_venta_cancelar]);
+                    $items = $stmtItems->fetchAll();
+                    
+                    foreach ($items as $item) {
+                        $pdo->prepare("UPDATE productos SET stock_actual = stock_actual + ? WHERE id_producto = ?")
+                            ->execute([$item['cantidad'], $item['producto_id']]);
+                    }
+
+                    // 3. Actualizar estado a Cancelado
+                    $pdo->prepare("UPDATE ventas SET estado_pedido = 'Cancelado' WHERE id_venta = ?")->execute([$id_venta_cancelar]);
+                    
+                    // 4. Integración Telegram (REEMPLAZA CON TUS DATOS)
+                    $telegram_token = "8427557222:AAGIqWe6D2sx5t7QvCiUyIYKfffEbUKLk1o"; 
+                    $chat_id = "1909816646";//Busca @userinfobot en telegram, dale /start, y reemplaza este id con el tuyo para que las confirmaciones te lleguen a ti
+                    
+                    $mensaje_telegram = "🚫 *PEDIDO CANCELADO*\n\n";
+                    $mensaje_telegram .= "👤 Cliente: " . $info_pedido['nombre_completo'] . "\n";
+                    $mensaje_telegram .= "📦 Código Recojo: *" . $info_pedido['codigo_recojo'] . "*\n";
+                    $mensaje_telegram .= "🔄 _El stock de los productos ha sido devuelto a la tienda automáticamente._";
+
+                    $url_telegram = "https://api.telegram.org/bot{$telegram_token}/sendMessage";
+                    $data = ['chat_id' => $chat_id, 'text' => $mensaje_telegram, 'parse_mode' => 'Markdown'];
+                    $options = ['http' => ['header' => "Content-type: application/x-www-form-urlencoded\r\n", 'method' => 'POST', 'content' => http_build_query($data)]];
+                    @file_get_contents($url_telegram, false, stream_context_create($options));
+                }
+
+                echo "<script>window.location.href='dashboard.php';</script>";
+                exit();
+            }
+
+            // Consultar pedidos del cliente logueado
+            $mis_pedidos = $pdo->prepare("SELECT * FROM ventas WHERE cliente_id = ? AND codigo_recojo IS NOT NULL ORDER BY fecha_venta DESC");
+            $mis_pedidos->execute([$_SESSION['usuario_id']]);
+            $pedidos = $mis_pedidos->fetchAll();
+            ?>
+
+            <?php if (count($pedidos) > 0): ?>
+                <table style="width: 100%; background: white; border-collapse: collapse; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+                    <tr style="background: #2d3436; color: white;">
+                        <th style="padding: 12px; text-align: left;">Fecha</th>
+                        <th style="padding: 12px; text-align: left;">Código Recojo</th>
+                        <th style="padding: 12px; text-align: left;">Total y Método</th>
+                        <th style="padding: 12px; text-align: left;">Estado</th>
+                        <th style="padding: 12px; text-align: center;">Acciones</th>
+                    </tr>
+                    <?php foreach ($pedidos as $ped): ?>
+                    <tr style="border-bottom: 1px solid #eee;">
+                        <td style="padding: 12px;"><?php echo date('d/m/Y H:i', strtotime($ped['fecha_venta'])); ?></td>
+                        <td style="padding: 12px;"><b style="color: #0984e3; font-size: 16px;"><?php echo $ped['codigo_recojo']; ?></b></td>
+                        
+                        <td style="padding: 12px;">
+                            <b>Bs. <?php echo $ped['total']; ?></b><br>
+                            <small style="color: #7f8c8d;"><?php echo $ped['metodo_pago']; ?></small><br>
+                            
+                            <!-- BOTÓN PARA VER EL QR SI AÚN NO HA PAGADO Y ELIGIÓ QR -->
+                            <?php if ($ped['metodo_pago'] === 'QR' && $ped['estado_pedido'] === 'Pendiente'): ?>
+                                <a href="uploads/qr_pago.png" target="_blank" style="background: #e8f8f5; color: #16a085; padding: 4px 8px; border-radius: 4px; font-size: 11px; font-weight: bold; text-decoration: none; display: inline-block; margin-top: 5px; border: 1px solid #1abc9c;">
+                                    📷 Ver QR de Pago
+                                </a>
+                            <?php endif; ?>
+                        </td>
+
+                        <td style="padding: 12px;">
+                            <?php 
+                                $color = ($ped['estado_pedido'] == 'Cancelado') ? '#e74c3c' : (($ped['estado_pedido'] == 'Entregado') ? '#27ae60' : '#f39c12');
+                            ?>
+                            <b style="color: <?php echo $color; ?>;"><?php echo $ped['estado_pedido']; ?></b>
+                        </td>
+                        <td style="padding: 12px; text-align: center;">
+                            <?php if ($ped['estado_pedido'] === 'Pendiente'): ?>
+                                <a href="dashboard.php?cancelar_pedido=<?php echo $ped['id_venta']; ?>" style="background: #e74c3c; color: white; padding: 6px 10px; border-radius: 4px; text-decoration: none; font-size: 12px;" onclick="return confirm('¿Seguro que deseas cancelar este pedido? Perderás tu reserva de los productos.');">Cancelar Pedido</a>
+                            <?php else: ?>
+                                <span style="color: #bdc3c7; font-size: 12px;">No disponible</span>
+                            <?php endif; ?>
+                        </td>
+                    </tr>
+                    <?php endforeach; ?>
+                </table>
+            <?php else: ?>
+                <p style="color: #7f8c8d;">Aún no has realizado compras en la tienda.</p>
             <?php endif; ?>
         </section>
     </div>

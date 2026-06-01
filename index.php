@@ -38,6 +38,7 @@ $destacados = $stmt->fetchAll();
         <div class="nav-buttons">
             <a href="portal_clientes.php" class="btn btn-client">Portal de Clientes</a>
             <a href="portal_staff.php" class="btn btn-staff">Acceso Personal (Staff/Admin)</a>
+            <a href="catalogo.php" class="btn btn-client">🛍️ Ver Tienda Online</a>
         </div>
     </header>
 

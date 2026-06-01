@@ -49,6 +49,7 @@ $logs = $stmt_logs->fetchAll();
         <p><a href="recepcion_dashboard.php" style="color:#f1c40f; font-weight: bold; text-decoration: none;">🗓️ Calendario Maestro (Recepción)</a></p>
         <p><a href="gestion_personal.php" style="color:white; text-decoration: none;">👥 Gestión de Personal</a></p>
         <p><a href="gestion_clientes.php" style="color:white; text-decoration: none;">🐾 Ver Clientes</a></p>
+        <p><a href="gestionar_productos.php" style="color:white; text-decoration: none;">📦 Gestionar Tienda</a></p>
         <br>
         <p><a href="admin_seguridad.php" class="btn">🔐 Cambiar mi Contraseña</a></p>
         <p><a href="logout.php" style="color: #e74c3c; font-weight: bold; text-decoration: none;">🚪 Cerrar Sesión</a></p>
