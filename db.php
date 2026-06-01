@@ -1,9 +1,9 @@
 <?php
 // C:\xampp\htdocs\petspa\db.php
-$host = 'localhost';
-$db   = 'spamascotas'; // El nombre exacto de tu SQL
-$user = 'root';
-$pass = ''; 
+$host = $env['DB_HOST'];
+$dbname = $env['DB_NAME'];
+$user = $env['DB_USER'];
+$pass = $env['DB_PASS'];
 $port = '3307'; // El puerto que indica tu phpMyAdmin
 
 try {

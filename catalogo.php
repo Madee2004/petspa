@@ -10,7 +10,6 @@ if ($es_cliente && !isset($_SESSION['carrito'])) {
     $_SESSION['carrito'] = [];
 }
 
-// Obtener nombre del cliente para Telegram
 $cliente_nombre = "Desconocido";
 if ($es_cliente) {
     $stmtC = $pdo->prepare("SELECT nombre_completo FROM usuarios WHERE id_usuario = ?");
@@ -81,8 +80,9 @@ if ($es_cliente) {
                         ->execute([$item['cantidad'], $id_prod]);
                 }
 
-                $telegram_token = "8427557222:AAGIqWe6D2sx5t7QvCiUyIYKfffEbUKLk1o"; 
-                $chat_id = "1909816646"; //Busca @userinfobot en telegram, dale /start, y reemplaza este id con el tuyo para que las confirmaciones te lleguen a ti
+                $env = parse_ini_file(__DIR__ . '/.env');
+                $telegram_token = $env['TELEGRAM_TOKEN']; 
+                $chat_id = $env['TELEGRAM_CHAT_ID']; //Busca @userinfobot en telegram, dale /start, y reemplaza este id con el tuyo para que las confirmaciones te lleguen a ti
                 $url_telegram = "https://api.telegram.org/bot{$telegram_token}/sendMessage";
                 $data = ['chat_id' => $chat_id, 'text' => $detalle_telegram, 'parse_mode' => 'Markdown'];
                 $options = ['http' => ['header' => "Content-type: application/x-www-form-urlencoded\r\n", 'method' => 'POST', 'content' => http_build_query($data)]];

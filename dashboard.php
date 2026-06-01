@@ -192,8 +192,9 @@ $tiene_mascotas = (count($lista_mascotas) > 0);
                     $pdo->prepare("UPDATE ventas SET estado_pedido = 'Cancelado' WHERE id_venta = ?")->execute([$id_venta_cancelar]);
                     
                     // 4. Integración Telegram (REEMPLAZA CON TUS DATOS)
-                    $telegram_token = "8427557222:AAGIqWe6D2sx5t7QvCiUyIYKfffEbUKLk1o"; 
-                    $chat_id = "1909816646";//Busca @userinfobot en telegram, dale /start, y reemplaza este id con el tuyo para que las confirmaciones te lleguen a ti
+                    $env = parse_ini_file(__DIR__ . '/.env');
+                    $telegram_token = $env['TELEGRAM_TOKEN']; 
+                    $chat_id = $env['TELEGRAM_CHAT_ID'];//Busca @userinfobot en telegram, dale /start, y reemplaza este id con el tuyo para que las confirmaciones te lleguen a ti
                     
                     $mensaje_telegram = "🚫 *PEDIDO CANCELADO*\n\n";
                     $mensaje_telegram .= "👤 Cliente: " . $info_pedido['nombre_completo'] . "\n";
